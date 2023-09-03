@@ -6,10 +6,16 @@ body {
     display: flex;
     justify-content: center;
     color: grey;
-    background-color: black;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2)
 }
 
 #navlinks {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: black;
 }

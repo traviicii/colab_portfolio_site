@@ -1,0 +1,10 @@
+body {
+    background-image: linear-gradient(to bottom right, rgba(252,252,252), rgba(224,231,226), rgba(221,228,253));
+    background-attachment: fixed;
+}
+
+#split {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
