@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    color: grey;
+    background-color: black;
+}
+
+#navlinks {
+    padding-left: 10px;
+    padding-right: 10px;
+}
