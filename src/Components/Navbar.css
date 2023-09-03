@@ -13,9 +13,31 @@ body {
 }
 
 #navlinks {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom:2px;
     text-decoration: none;
     color: black;
+
+    background:
+    linear-gradient(
+      to right,
+      rgba(188, 223, 255, 1),
+      rgba(183, 203, 252, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(254, 175, 89, 1),
+      rgba(251, 79, 194, 1)
+      /* rgba(165, 255, 159, 1) */
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+#navlinks:hover {
+    background-size: 0 3px, 100% 3px;
 }
