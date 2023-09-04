@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
-import './Styles/Projects.css'
+import React from 'react'
+import './Main.css'
 
-export default class Projects extends Component {
-  render() {
-    return (
-      <div>Projects</div>
-    )
-  }
+export default function Projects() {
+  return (
+    <div id='split'>
+        <div>
+            <p>Projects</p>Projects
+        </div>
+      </div>
+  )
 }
+

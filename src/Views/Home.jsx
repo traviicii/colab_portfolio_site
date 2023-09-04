@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import './Styles/Home.css'
+import React from 'react'
+import './Main.css'
 
-export default class Home extends Component {
-  render() {
-    return (
-      <div id="split">
+export default function Home() {
+  return (
+    <div id="split">
         <div>
           Left
         </div>
@@ -12,6 +11,6 @@ export default class Home extends Component {
           Right
         </div>
       </div>
-    )
-  }
+  )
 }
+

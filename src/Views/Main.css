@@ -1,0 +1,36 @@
+body {
+    background-image: linear-gradient(to bottom right, rgba(252,252,252), rgba(224,231,226), rgba(221,228,253));
+    background-attachment: fixed;
+}
+
+#split {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+#about {
+    max-width: 400px;
+    letter-spacing: 2px;
+}
+
+#aboutintro {
+
+}
+
+#POD {
+    max-width: 75%;
+    margin-bottom: 15%;
+    background-image: linear-gradient(to bottom right, rgba(253,243,234, .5), rgba(255,240,244, .5), rgba(255,239,249, .5));
+    
+    padding: 2%;
+    border-radius: 20px;
+}
+
+#nasapic {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
