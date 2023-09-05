@@ -20,7 +20,10 @@ export default function Inspiration() {
     return (
         <div id='split'>
             <div id='POD'>
-                <h3 >Science and technology have always been huge interests and sources of inspiration in my life. So here you will find NASA's picture of the day accompanied with a full explanation of each image! Every day there is a new featured image of our stunning universe</h3>
+                <div>
+                    <h4 id='inspotext'>Science and technology have always been huge interests and sources of inspiration in my life. So here you will find NASA's picture of the day accompanied with a full explanation of what you're looking at! Every day there is a new featured image of our stunning universe.</h4>
+                </div>
+                
                 <h1 id='split'>NASA Astronomy Picture Of The Day</h1>
                 <h2 id='split'> {POD.title}</h2>
                 <img id="nasapic" src={POD.hdurl} alt="NASA Picture Of The Day" />

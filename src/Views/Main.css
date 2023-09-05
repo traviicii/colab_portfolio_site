@@ -34,3 +34,8 @@ body {
     margin-right: auto;
     height: auto;
 }
+
+#inspotext {
+    text-align: center;
+    letter-spacing: 1.5px
+}
