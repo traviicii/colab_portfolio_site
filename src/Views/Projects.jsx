@@ -4,17 +4,21 @@ import './Main.css'
 export default function Projects() {
   return (
     <div className='projects' id='split'>
-        <div className='projectsblocks'>
-            <p>myGuest</p>
+        <div className='projectblocks'>
+            <h3>myGuest</h3>
             <p>
-                myGuest is my most recent project, and was also the capstone project I created in order to graduate from Coding Templ's software engineering bootcamp. It is a full stack, fully responsive web application designed for hairstylists. It allows you to keep a detailed custom database
+                myGuest is a <b>full stack</b>, fully <b>responsive</b> web application designed for hairstylists. It allows you to keep a detailed custom database of clientelle including contact information and in depth hair color analysis, while also allowing you to create, edit, and delete appointment history witht he option to add photos, notes, and pricing to each appointment entry. Additionally users are able to download their client data into an excel spreadsheet. Future updates will include sending mass text alerts to all or selected clients as well as appointment scheduling and tracking.
+            </p>
+            <p><b>Technologies used</b>: React, Flask, DaisyUI, Tailwind</p>
+        </div>
+        <div className='projectblocks'>
+            <h3>Poke Battle!</h3>
+            <p>
+
             </p>
         </div>
-        <div className='projectsblocks'>
-            <p>Poke Battle!</p>
-        </div>
-        <div className='projectsblocks'>
-            <p>Traviicii Weather</p>
+        <div className='projectblocks'>
+            <h3>Traviicii Weather</h3>
         </div>
       </div>
   )

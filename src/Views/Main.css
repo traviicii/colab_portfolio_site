@@ -52,10 +52,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 2px;
 }
 
 .projectblocks {
-
+    max-width: 85%;
+    margin-bottom: 15%;
+    background-image: linear-gradient(to bottom right, rgba(253,243,234, .5), rgba(255,240,244, .5), rgba(255,239,249, .5));
+    padding: 2%;
+    border-radius: 20px;
 }
 
 /* End Projects */
