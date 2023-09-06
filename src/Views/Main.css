@@ -3,6 +3,11 @@ body {
     background-attachment: fixed;
 }
 
+/* .font-link {
+    font-family: 'Martian Mono', monospace;
+    font-family: 'PT Sans', sans-serif;
+} */
+
 #split {
     display: flex;
     justify-content: center;
