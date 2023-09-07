@@ -16,8 +16,83 @@ body {
 
 /* About */
 #about {
-    max-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
     letter-spacing: 2px;
+    padding-top: 2%;
+}
+
+@media (max-width: 430px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: 2px;
+        padding-top: 2%;
+    }
+
+    #textblock {
+        width: 100%;
+        max-width: none; 
+    }
+
+    #headshotblock {
+        width: 100%; 
+        max-width: none; 
+    }
+}
+
+#textblock {
+    width: 40%;
+    background-image: linear-gradient(to bottom right, rgba(253,243,234, .5), rgba(255,240,244, .5), rgba(255,239,249, .5));
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
+}
+
+#headshotblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 400px;
+    max-height: 500px;
+    background-image: linear-gradient(to bottom right, rgba(253,243,234, .5), rgba(255,240,244, .5), rgba(255,239,249, .5));
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
+}
+
+.linklogo {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.headshotlink {
+    text-decoration: none;
+    color: black;
+    background: -webkit-linear-gradient(
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+}
+
+.linkblock {
+
+}
+
+#headshot {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: auto;
 }
 
 #aboutintro {
