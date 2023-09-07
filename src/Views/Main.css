@@ -14,6 +14,15 @@ body {
     padding-top: 2%;
 }
 
+@font-face {
+    font-family: PTSans;
+    src: url(../PTSans-Regular.ttf);
+}
+
+* {
+    font-family: PTSans;
+}
+
 /* About */
 #about {
     display: flex;

@@ -3,7 +3,7 @@ import './Main.css'
 import headshot from "../Images/headshot.jpg"
 import github_mark from "../Images/github_mark.png"
 import linkedin from "../Images/linkedin.png"
-import ReactCanvasConfetti from 'react-canvas-confetti'
+// import ReactCanvasConfetti from 'react-canvas-confetti'
 import TRAVIS_PECK_RESUME from "../Images/TRAVIS_PECK_RESUME.pdf"
 
 
@@ -31,13 +31,13 @@ export default function About() {
 
                 <div>
                     <div className='linkblock'>
-                        <img className='linklogo' src={github_mark} />
+                        <img className='linklogo' alt='' src={github_mark} />
                         <a className="headshotlink" href='https://github.com/traviicii'>GitHub</a>
                     </div>
                 </div>
                 <div style={{ marginTop: "8px" }}>
                     <div className='linkblock'>
-                        <img className='linklogo' src={linkedin} />
+                        <img className='linklogo' alt='' src={linkedin} />
                         <a className="headshotlink" href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
                     </div>
                 </div>

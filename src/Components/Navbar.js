@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
 
   return (
-    <div id='navbar'>
+    <div className='ptsans' id='navbar'>
       <div style={{display: "flex", justifyContent: "center"}}>
         {/* <Link to="/" id='navlinks'>Home</Link> */}
         <Link to="/about" id='navlinks'>About</Link>
