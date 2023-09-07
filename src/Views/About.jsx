@@ -2,6 +2,8 @@ import React from 'react'
 import './Main.css'
 import headshot from "../Images/headshot.jpg"
 import github_mark from "../Images/github_mark.png"
+import linkedin from "../Images/linkedin.png"
+
 
 
 export default function About() {
@@ -18,7 +20,7 @@ export default function About() {
 
             <div id='headshotblock'>
                 <div>
-                    <h1 style={{marginTop: "0px"}}>Travis Peck</h1>
+                    <h1 style={{ marginTop: "0px" }}>Travis Peck</h1>
                 </div>
                 <div>
                     <img alt="" src={headshot} id='headshot' />
@@ -29,6 +31,15 @@ export default function About() {
                         <img className='linklogo' src={github_mark} />
                         <a className="headshotlink" href='https://github.com/traviicii'>GitHub</a>
                     </div>
+                </div>
+                <div style={{ marginTop: "8px" }}>
+                    <div className='linkblock'>
+                        <img className='linklogo' src={linkedin} />
+                        <a className="headshotlink" href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
+                    </div>
+                </div>
+                <div>
+                    
                 </div>
 
             </div>

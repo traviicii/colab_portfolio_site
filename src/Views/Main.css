@@ -24,25 +24,7 @@ body {
     padding-top: 2%;
 }
 
-@media (max-width: 430px) {
-    #about {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        letter-spacing: 2px;
-        padding-top: 2%;
-    }
 
-    #textblock {
-        width: 100%;
-        max-width: none; 
-    }
-
-    #headshotblock {
-        width: 100%; 
-        max-width: none; 
-    }
-}
 
 #textblock {
     width: 40%;
@@ -83,7 +65,8 @@ body {
 }
 
 .linkblock {
-
+    display: flex;
+    align-items: center;
 }
 
 #headshot {
@@ -99,6 +82,30 @@ body {
 
 }
 
+@media (max-width: 430px) {
+    #about {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        letter-spacing: 2px;
+        padding-top: 2%;
+        
+    }
+
+    #textblock {
+        width: 90%;
+        max-width: none; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #headshotblock {
+        width: 350px;
+         
+        max-width: none; 
+        padding-bottom: 30px;
+    }
+}
 /* End About */
 
 
