@@ -3,13 +3,16 @@ import './Main.css'
 import headshot from "../Images/headshot.jpg"
 import github_mark from "../Images/github_mark.png"
 import linkedin from "../Images/linkedin.png"
-
+import ReactCanvasConfetti from 'react-canvas-confetti'
+import TRAVIS_PECK_RESUME from "../Images/TRAVIS_PECK_RESUME.pdf"
 
 
 export default function About() {
+
     return (
 
         <div id='about'>
+
             <div id='textblock'>
                 <h2 id='aboutintro'>My name is Travis and I'm a budding software engineer based in NYC with a passion for developing useful software and web applications that help and improve people's lives.</h2>
                 <p>I am deeply motivated by the conepts of "tech for good" and "green tech". I am currently in the process of making a transition from a successful hairstyiling career into the world of tech and software development. My 15 years of experience in the professional hairstyling industry as both a master stylist and educator has given me countless skills and experiences that are surprisingly transferrable into the tech industry.</p>
@@ -38,9 +41,9 @@ export default function About() {
                         <a className="headshotlink" href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
                     </div>
                 </div>
-                <div>
-                    
-                </div>
+                
+                    <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download CV</a>
+                
 
             </div>
 

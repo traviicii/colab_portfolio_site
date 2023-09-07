@@ -26,8 +26,8 @@ export default function Inspiration() {
                 
                 <h1 id='split'>NASA Astronomy Picture Of The Day</h1>
                 <h2 id='split'> {POD.title}</h2>
-                
-                {POD.media_type == "image" ? <img id="nasapic" src={POD.hdurl} alt="NASA Picture Of The Day" title="NASA Picture Of The Day" /> : <object id="nasapic" data={POD.url} alt="NASA Picture Of The Day" title="NASA Picture Of The Day" />}
+
+                {POD.media_type === "image" ? <img id="nasapic" src={POD.hdurl} alt="NASA Picture Of The Day" title="NASA Picture Of The Day" /> : <object id="nasapic" data={POD.url} alt="NASA Picture Of The Day" title="NASA Picture Of The Day" />}
 
                 <p id="explanation"><b>Explanation</b>: {POD.explanation}</p>
             </div>
