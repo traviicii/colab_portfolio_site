@@ -14,11 +14,13 @@ export default function About() {
         <div id='about'>
 
             <div id='textblock'>
-                <h2 id='aboutintro'>My name is Travis and I'm a budding software engineer based in NYC with a passion for developing useful software and web applications that help and improve people's lives.</h2>
-                <p>I am deeply motivated by the conepts of "tech for good" and "green tech". I am currently in the process of making a transition from a successful hairstyling career into the world of tech and software development. My 15 years of experience in the professional hairstyling industry as both a master stylist and educator has given me countless skills and experiences that are surprisingly transferrable into the tech industry.</p>
+                <h2 id='aboutintro'>Hi, my name is Travis and I'm a software engineer based in NYC. Motivated by ‘tech for good’ and ‘green tech’, my passion is developing useful software and web applications that help improve people's lives.</h2>
+
+                <p>I’m transitioning into the world of software engineering from a successful <b>hairstyling career of 15 years</b>. My experience in the professional beauty industry, as both a <b>master stylist and educator</b>, has provided me with countless skills that are surprisingly transferrable into the tech industry.</p>
                 {/* About two years ago I bstarted a bachelor of science degree in chemistry where I ended up taking a computer science course and quickly found a passion I never knew I had. I almost immediately switched my major and haven't regretted it in the slightest bit. I was able to learn python which then opened my eyes to the endless possibilities that learning to write software can bring forth which in turn ignited my passion even further.  */}
-                <p>Earlier this year I was able to complete Coding Temple's sotfware engineering course and had an absolute blast. I left the program excited for the future and what I might be able to accomplish with my newfound skillsets. My education through Coding Temple has become priceless and I pride myself in writing efficient readable code and working with others to accomplish even greater goals. I simply cannot wait to begin my career as a software engineer!</p>
-                <p>When I'm not writing code or making people look and feel beautiful you can find me gaming with friends online, biking to the beach, or baking and cooking delicious food. I've recently become fascinated with bread making and it has become a fantastic and meditative way to relieve stress and the reward is always worth the effort every time and I find this aspect of baking to be very similar to writing code!</p>
+                <p>Earlier this year I had an absolute blast completing <b>Coding Temple's Software Engineering</b> course and am excited for the future and what I might be able to accomplish with my newfound skills. I pride myself in <b>writing efficient, readable code</b> and working with others to accomplish even greater goals. </p>
+
+                <p>When I'm not writing code or making people look and feel beautiful you can find me gaming with friends online, biking to the beach, or baking bread (a newfound fascination).</p>
             </div>
 
             <div id='headshotblock'>
