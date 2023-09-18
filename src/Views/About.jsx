@@ -34,13 +34,13 @@ export default function About() {
                 <div>
                     <div className='linkblock'>
                         <img className='linklogo' alt='' src={github_mark} />
-                        <a className="headshotlink" href='https://github.com/traviicii'>GitHub</a>
+                        <a className="headshotlink" target="_blank" rel="noreferrer" href='https://github.com/traviicii'>GitHub</a>
                     </div>
                 </div>
                 <div style={{ marginTop: "8px" }}>
                     <div className='linkblock'>
                         <img className='linklogo' alt='' src={linkedin} />
-                        <a className="headshotlink" href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
+                        <a className="headshotlink" target="_blank" rel="noreferrer"  href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
                     </div>
                 </div>
                 
