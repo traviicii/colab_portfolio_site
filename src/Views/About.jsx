@@ -40,12 +40,12 @@ export default function About() {
                 <div style={{ marginTop: "8px" }}>
                     <div className='linkblock'>
                         <img className='linklogo' alt='' src={linkedin} />
-                        <a className="headshotlink" target="_blank" rel="noreferrer"  href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
+                        <a className="headshotlink" target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/travis-peck-b8386837/'>Linkedin</a>
                     </div>
                 </div>
-                
-                    <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download CV</a>
-                
+
+                <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download CV</a>
+
 
             </div>
 
