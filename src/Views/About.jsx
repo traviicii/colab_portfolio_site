@@ -44,7 +44,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download CV</a>
+                <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download Resumé</a>
 
 
             </div>
