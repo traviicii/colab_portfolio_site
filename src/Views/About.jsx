@@ -14,13 +14,14 @@ export default function About() {
         <div id='about'>
 
             <div id='textblock'>
-                <h2 id='aboutintro'>Hi, my name is Travis and I'm a software engineer based in NYC. Motivated by ‘tech for good’ and ‘green tech’, my passion is developing useful software and web applications that help improve people's lives.</h2>
+                <h2 id='aboutintro'>Hi, I’m Travis, a software engineer and educator based in NYC.
+                Driven by a passion for ‘tech for good’ and ‘green tech,’ I love creating software and web applications that make a meaningful impact on people’s lives.</h2>
 
-                <p>I’m transitioning into the world of software engineering from a successful <b>hairstyling career of 15 years</b>. My experience in the professional beauty industry, as both a <b>master stylist and educator</b>, has provided me with countless skills that are surprisingly transferrable into the tech industry.</p>
-                {/* About two years ago I bstarted a bachelor of science degree in chemistry where I ended up taking a computer science course and quickly found a passion I never knew I had. I almost immediately switched my major and haven't regretted it in the slightest bit. I was able to learn python which then opened my eyes to the endless possibilities that learning to write software can bring forth which in turn ignited my passion even further.  */}
-                <p>Earlier this year I had an absolute blast completing <b>Coding Temple's Software Engineering</b> course and am excited for the future and what I might be able to accomplish with my newfound skills. I pride myself in <b>writing efficient, readable code</b> and working with others to accomplish even greater goals. </p>
+                <p>My journey into tech began after a successful 15-year career as a hairstylist and educator in the professional beauty industry. That experience honed my creativity, communication skills, and ability to adapt—qualities that have proven invaluable in software engineering and teaching.</p>
 
-                <p>When I'm not writing code or making people look and feel beautiful you can find me gaming with friends online, biking to the beach, or baking bread (a newfound fascination).</p>
+                <p>Since completing Coding Temple’s Software Engineering course in 2023, I’ve not only continued growing as a developer but also returned to Coding Temple as an educator, where I help the next generation of engineers unlock their potential. As an instructor, I lead classes, mentor students, and contribute to curriculum development. I take pride in my ability to write clean, efficient code and foster collaboration to achieve extraordinary results.</p>
+
+                <p>When I’m not coding or teaching, you can find me gaming with friends online, biking to the beach, or perfecting my latest sourdough recipe.</p>
             </div>
 
             <div id='headshotblock'>
@@ -45,8 +46,6 @@ export default function About() {
                 </div>
 
                 <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download Resumé</a>
-
-
             </div>
 
         </div>
