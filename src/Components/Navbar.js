@@ -14,16 +14,16 @@ export default function Navbar() {
   useGSAP(
     () => {
       // rise up entrance
-      gsap.from('.link1', { duration: 1.2, y: 300, rotation: 260, ease: "back", backgroundColor: "black" })
+      gsap.from('.link1', { duration: 2.2, y: 300, rotation: 260, ease: "elastic", backgroundColor: "black" })
   
       // dangle entrance
-      gsap.from('.link2', { duration: 2.6, x: -300, rotation: 90, ease: "elastic" })
+      gsap.from('.link2', { duration: 3, x: -300, rotation: 90, ease: "elastic" })
   
       // drop in entrance
       gsap.from('.link3', { duration: 1.7, y: -300, rotation: 270, ease: "back" })
 
 
-      gsap.from('#navbar', { duration: 1, opacity: 0, ease: 'power1.in'}
+      gsap.from('#navbar', { duration: 2, opacity: 0, ease: 'power1.in'}
 
       
       , 

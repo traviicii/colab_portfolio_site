@@ -14,18 +14,18 @@ export default function About() {
 
     const resumeButton = useRef();
 
-    useGSAP(resumeButton, {
-        onHover: (timeline) => {
-            timeline.to(resumeButton.current, {
-                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
-                backgroundSize: "200% auto",
-                backgroundPosition: "100%",
-                duration: 0.8,
-                ease: "power1.inOut",
-            });
-        },
-        onLeave: (timeline) => timeline.reverse(),
-    });
+    // useGSAP(resumeButton, {
+    //     onHover: (timeline) => {
+    //         timeline.to(resumeButton.current, {
+    //             background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
+    //             backgroundSize: "200% auto",
+    //             backgroundPosition: "100%",
+    //             duration: 0.8,
+    //             ease: "power1.inOut",
+    //         });
+    //     },
+    //     onLeave: (timeline) => timeline.reverse(),
+    // });
 
     
 
