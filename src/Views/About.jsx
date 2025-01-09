@@ -5,9 +5,29 @@ import github_mark from "../Images/github_mark.png"
 import linkedin from "../Images/linkedin.png"
 // import ReactCanvasConfetti from 'react-canvas-confetti'
 import TRAVIS_PECK_RESUME from "../Images/TRAVIS_PECK_RESUME.pdf"
+import { useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 
 export default function About() {
+
+    const resumeButton = useRef();
+
+    useGSAP(resumeButton, {
+        onHover: (timeline) => {
+            timeline.to(resumeButton.current, {
+                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)",
+                backgroundSize: "200% auto",
+                backgroundPosition: "100%",
+                duration: 0.8,
+                ease: "power1.inOut",
+            });
+        },
+        onLeave: (timeline) => timeline.reverse(),
+    });
+
+    
 
     return (
 
@@ -15,7 +35,7 @@ export default function About() {
 
             <div id='textblock'>
                 <h2 id='aboutintro'>Hi, I’m Travis, a software engineer and educator based in NYC.
-                Driven by a passion for ‘tech for good’ and ‘green tech,’ I love creating software and web applications that make a meaningful impact on people’s lives.</h2>
+                    Driven by a passion for ‘tech for good’ and ‘green tech,’ I love creating software and web applications that make a meaningful impact on people’s lives.</h2>
 
                 <p>My journey into tech began after a successful 15-year career as a hairstylist and educator in the professional beauty industry. That experience honed my creativity, communication skills, and ability to adapt—qualities that have proven invaluable in software engineering and teaching.</p>
 
@@ -24,7 +44,7 @@ export default function About() {
                 <p>When I’m not coding or teaching, you can find me gaming with friends online, biking to the beach, or perfecting my latest sourdough recipe.</p>
             </div>
 
-            <div id='headshotblock'>
+            <div id='headshotblock' >
                 <div>
                     <h1 style={{ marginTop: "0px" }}>Travis Peck</h1>
                 </div>
@@ -45,7 +65,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <a id='downloadbutton' href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download Resumé</a>
+                <a id='downloadbutton' className='shiny-button' ref={resumeButton} href={TRAVIS_PECK_RESUME} download="TRAVIS PECK RESUME">Download Resumé</a>
             </div>
 
         </div>
