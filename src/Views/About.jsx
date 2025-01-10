@@ -36,7 +36,8 @@ export default function About() {
             tl.from('#linkedin', { y: -300, delay: -.3, rotation: -180  })
             tl.from('#github', { y: -300, delay: -.4, rotation: 180  })
             tl.from('#imagecontainer', { y: -300, delay: -.4, rotation: -45  })
-            tl.from('#name', { y: -300, delay: -.4, rotation: 180  })
+            tl.from('#first', { y: -300, delay: -.4, rotation: -180  })
+            tl.from('#last', { y: -300, delay: -.4, rotation: 180  })
 
             tl.from("#aboutintro", { x: -300, duration: .2, rotation: 5}, "-=.4")
             tl.from("#p2", { x: -300, duration: .3, rotation: -5}, "-=.4")
@@ -63,7 +64,7 @@ export default function About() {
 
             <div id='headshotblock' >
                 <div id="name">
-                    <h1 style={{ marginTop: "0px" }}>Travis Peck</h1>
+                    <h1 style={{ marginTop: "0px", display: "flex" }}><div id='first' style={{marginRight: "9px"}}>Travis</div><div id='last'>Peck</div></h1>
                 </div>
                 <div id='imagecontainer'>
                     <img alt="" src={headshot} id='headshot' />
