@@ -14,7 +14,7 @@ export default function Navbar() {
   useGSAP(
     () => {
       // rise up entrance
-      gsap.from('.link1', { duration: 3.3, y: 300, rotation: 260, ease: "elastic", backgroundColor: "black" })
+      gsap.from('.link1', { duration: 3.3, y: 300, rotation: 260, ease: "elastic" })
   
       // dangle entrance
       gsap.from('.link2', { duration: 3.7, x: -300, rotation: 90, ease: "elastic" })
