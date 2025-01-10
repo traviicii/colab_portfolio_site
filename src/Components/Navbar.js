@@ -23,7 +23,7 @@ export default function Navbar() {
       gsap.from('.link3', { duration: 1.7, y: -300, rotation: 270, ease: "elastic" })
 
 
-      gsap.from('#navbar', { duration: 2.5, opacity: 0, ease: 'power1.inOut'}
+      gsap.from('#navbar', { duration: 2.5, opacity: 0, ease: 'power1.inOut' }
 
       
       , 
