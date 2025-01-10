@@ -20,7 +20,7 @@ export default function Navbar() {
       gsap.from('.link2', { duration: 3.7, x: -300, rotation: 90, ease: "elastic" })
   
       // drop in entrance
-      gsap.from('.link3', { duration: 1.7, y: -300, rotation: 270, ease: "back" })
+      gsap.from('.link3', { duration: 1.7, y: -300, rotation: 270, ease: "elastic" })
 
 
       gsap.from('#navbar', { duration: 2.5, opacity: 0, ease: 'power1.inOut'}
