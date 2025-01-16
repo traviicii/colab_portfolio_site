@@ -31,18 +31,21 @@ export default function About() {
         () => {
             gsap.from("#about", {duration: 1, opacity: 0})
             const tl = gsap.timeline({ defaults: {duration: .5, ease: 'back', opacity: 0}})
-
+            
             tl.from('#downloadbutton', { y: -300, delay: -.2, rotation: 180 })
             tl.from('#linkedin', { y: -300, delay: -.3, rotation: -180  })
             tl.from('#github', { y: -300, delay: -.4, rotation: 180  })
             tl.from('#imagecontainer', { y: -300, delay: -.4, rotation: -45  })
-            tl.from('#first', { y: -300, delay: -.4, rotation: -180  })
-            tl.from('#last', { y: -300, delay: -.4, rotation: 180  })
-
-            tl.from("#aboutintro", { x: -300, duration: .2, rotation: 5}, "-=.4")
+            tl.from('#first', { y: -300, delay: -.4, rotation: -180  }) // First name
+            tl.from('#last', { y: -300, delay: -.4, rotation: 180  }) // Last name
+            
+            
+            tl.from("#aboutintro", { x: -300, duration: .2, rotation: 5, scrollTrigger: '#p2'}, "-=.4")
             tl.from("#p2", { x: -300, duration: .3, rotation: -5}, "-=.4")
             tl.from("#p3", { x: -300, duration: .4, rotation: 5}, "-=.4")
             tl.from("#p4", { x: -300, duration: .5, rotation: -5}, "-=.4")
+
+
         }
     )
     
