@@ -1,9 +1,9 @@
 import React from 'react'
 import './Main.css'
-import myGuest from "../Images/myGuest.png"
-import traviicii_weather from "../Images/traviicii_weather.png"
-import pokebattle from "../Images/pokebattle.png"
-import teamup_marketing from "../Images/teamup_marketing.png"
+import myGuest from "../static/myGuest.png"
+import traviicii_weather from "../static/traviicii_weather.png"
+import pokebattle from "../static/pokebattle.png"
+import teamup_marketing from "../static/teamup_marketing.png"
 
 export default function Projects() {
     return (

@@ -1,10 +1,10 @@
 import React from 'react'
 import './Main.css'
-import headshot from "../Images/headshot.jpg"
-import github_mark from "../Images/github_mark.png"
-import linkedin from "../Images/linkedin.png"
+import headshot from "../static/headshot.jpg"
+import github_mark from "../static/github_mark.png"
+import linkedin from "../static/linkedin.png"
 // import ReactCanvasConfetti from 'react-canvas-confetti'
-import TRAVIS_PECK_RESUME from "../Images/TRAVIS_PECK_RESUME.pdf"
+import TRAVIS_PECK_RESUME from "../static/TRAVIS_PECK_RESUME.pdf"
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
