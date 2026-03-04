@@ -1,50 +1,46 @@
-body {
-    margin: 0;
+.nav {
+  position: sticky;
+  top: 18px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px 0;
 }
 
-#navbar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-width: 340px;
-    border-radius: 20px;
-    color: grey;
-    background-color: white;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
-    letter-spacing: 2px
+.nav-pill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(12, 12, 14, 0.8);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
 }
 
-#navlinks {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom:2px;
-    text-decoration: none;
-    color: black;
-
-    background:
-    linear-gradient(
-      to right,
-      rgba(188, 223, 255, 1),
-      rgba(183, 203, 252, 1)
-    ),
-    linear-gradient(
-      to right,
-      rgba(254, 175, 89, 1),
-      rgba(251, 79, 194, 1)
-      /* rgba(165, 255, 159, 1) */
-    );
-    background-size: 100% 3px, 0 3px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
+.nav-pill a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
-#navlinks:hover {
-    background-size: 0 3px, 100% 3px;
+.nav-pill a:hover {
+  color: var(--text-1);
+  background: rgba(200, 143, 90, 0.2);
+}
+
+@media (max-width: 700px) {
+  .nav {
+    padding: 16px 12px 0;
+  }
+
+  .nav-pill {
+    justify-content: center;
+  }
 }

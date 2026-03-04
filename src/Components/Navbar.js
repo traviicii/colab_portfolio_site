@@ -1,43 +1,60 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
-import { useRef } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import React, { useRef } from 'react';
+import './Navbar.css';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
+import scrollToSection from '../utils/scrollToSection';
 
 export default function Navbar() {
+  const container = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
-  gsap.registerPlugin(useGSAP);
+  const handleNavClick = (event) => {
+    const href = event.currentTarget.getAttribute('href');
+    if (!href || !href.startsWith('#')) {
+      return;
+    }
 
-  const container = useRef()
+    event.preventDefault();
+
+    scrollToSection(href, prefersReducedMotion);
+  };
 
   useGSAP(
     () => {
-      // rise up entrance
-      gsap.from('.link1', { duration: 3.3, y: 300, rotation: 260, ease: "elastic" })
-  
-      // dangle entrance
-      gsap.from('.link2', { duration: 3.7, x: -300, rotation: 90, ease: "elastic" })
-  
-      // drop in entrance
-      gsap.from('.link3', { duration: 1.7, y: -300, rotation: 270, ease: "elastic" })
+      if (prefersReducedMotion) {
+        return;
+      }
 
+      gsap.from(container.current, {
+        y: -20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+      });
 
-      gsap.from('#navbar', { duration: 2.5, opacity: 0, ease: 'power1.inOut' }
-
-      
-      , 
-      { scope: container })
-    })
+      gsap.from(container.current.querySelectorAll('a'), {
+        y: -10,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.08,
+        delay: 0.2,
+        ease: 'power2.out',
+      });
+    },
+    { scope: container, dependencies: [prefersReducedMotion] }
+  );
 
   return (
-    <div className='ptsans' id='navbar' ref={container}>
-      <div style={{ display: "flex", justifyContent: "center" }} id='linkBox'>
-        <Link to="/about" id='navlinks' className='link1'>About</Link>
-        <Link to='/projects' id='navlinks' className='link2'>Projects</Link>
-        <Link to='/inspiration' id='navlinks' className='link3'>Inspiration</Link>
+    <nav className="nav" ref={container} aria-label="Primary">
+      <div className="nav-pill">
+        <a href="#hero" onClick={handleNavClick}>Home</a>
+        <a href="#projects" onClick={handleNavClick}>Work</a>
+        <a href="#experience" onClick={handleNavClick}>Experience</a>
+        <a href="#about" onClick={handleNavClick}>About</a>
+        <a href="#playground" onClick={handleNavClick}>Playground</a>
+        <a href="#contact" onClick={handleNavClick}>Contact</a>
       </div>
-    </div>
-
-
-  )}
+    </nav>
+  );
+}

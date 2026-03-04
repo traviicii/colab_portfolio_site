@@ -2,6 +2,9 @@
   "name": "colab_portfolio_site",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18 <21"
+  },
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@testing-library/jest-dom": "^5.17.0",
