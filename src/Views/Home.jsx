@@ -18,7 +18,7 @@ import TRAVIS_PECK_RESUME from '../static/TRAVIS_PECK_RESUME.pdf';
 
 import teamupMarketing from '../static/teamup_marketing.png';
 import myGuest from '../static/myGuest.png';
-import traviiciiWeather from '../static/traviicii_weather.png';
+import dashWeatherShot from '../static/dash_weather.png';
 import pokebattle from '../static/pokebattle.png';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -82,6 +82,24 @@ export default function Home() {
 
   const projects = [
     {
+      title: 'Dash Weather',
+      image: dashWeatherShot,
+      imageAlt:
+        'Dash Weather dashboard showing current conditions, wind instrumentation, and atmospheric signal panels.',
+      imagePosition: 'center top',
+      className: 'project-card--dash-weather',
+      role: 'Frontend Engineer',
+      summary:
+        'Designed and built a weather dashboard that turns forecast, wind, radar, and atmospheric data into a clear, decision-friendly interface.',
+      impact:
+        'Helps people quickly understand current conditions, what is changing next, and which weather details actually matter.',
+      stack: ['React', 'TypeScript', 'Vite', 'Leaflet', 'Open-Meteo', 'OpenWeather'],
+      links: [
+        { label: 'Live', href: 'https://dash-weather-egrz.onrender.com/' },
+        { label: 'GitHub', href: 'https://github.com/traviicii/dash-weather' },
+      ],
+    },
+    {
       title: 'TeamUp',
       image: teamupMarketing,
       role: 'Full-Stack Developer',
@@ -109,20 +127,6 @@ export default function Home() {
         { label: 'Live', href: 'https://myguest.beauty' },
         { label: 'Frontend', href: 'https://github.com/traviicii/myguest_react' },
         { label: 'Backend', href: 'https://github.com/traviicii/myguest-flask' },
-      ],
-    },
-    {
-      title: 'Traviicii Weather',
-      image: traviiciiWeather,
-      role: 'Frontend Developer',
-      summary:
-        'Designed a playful weather experience with interactive visuals and responsive data-driven UI.',
-      impact:
-        'Delivered an intuitive interface that visualizes weather metrics with animated gauges.',
-      stack: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-      links: [
-        { label: 'Live', href: 'https://traviiciiweather.glitch.me/' },
-        { label: 'GitHub', href: 'https://github.com/traviicii/week7-weekend-project-weather-app' },
       ],
     },
     {

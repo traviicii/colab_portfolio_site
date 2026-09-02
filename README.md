@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Portfolio Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Create React App portfolio site with two public destinations:
 
-## Available Scripts
+- `/` for the portfolio home page
+- `/support` for the shared support page that other apps can link to
 
-In the project directory, you can run:
+## Development
 
-### `npm start`
+Use Node `20` for the cleanest Create React App experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Support Page
 
-### `npm test`
+The support page is intentionally shared and app-agnostic. Other apps can link into it with query params such as:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+/support?source=recipe-sorter&entry=hero-support
+```
 
-### `npm run build`
+Supported query params:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `source`
+- `entry`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If `source` is present, the page renders a subtle attribution line like:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+You're supporting the developer behind Recipe Sorter.
+```
 
-### `npm run eject`
+## Environment Variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Copy `.env.example` to `.env` and provide the Stripe Payment Links you want the support page to use.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cp .env.example .env
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Available variables:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `REACT_APP_API_KEY` for the NASA APOD section on the home page
+- `REACT_APP_SUPPORT_ONE_TIME_5_URL`
+- `REACT_APP_SUPPORT_ONE_TIME_15_URL`
+- `REACT_APP_SUPPORT_ONE_TIME_30_URL`
+- `REACT_APP_SUPPORT_MONTHLY_3_URL`
+- `REACT_APP_SUPPORT_MONTHLY_8_URL`
+- `REACT_APP_SUPPORT_CUSTOMER_PORTAL_URL`
 
-## Learn More
+The support page fails gracefully if any Stripe links are missing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Routing Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app now uses client-side routing for `/support`. Common SPA rewrite helpers are included for:
 
-### Code Splitting
+- Netlify via `public/_redirects`
+- Vercel via `vercel.json`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you deploy elsewhere, configure an equivalent rewrite to `index.html`.
