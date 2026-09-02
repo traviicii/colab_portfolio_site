@@ -37,8 +37,8 @@ const getEmbedUrl = (url) => {
       if (id) {
         return `https://www.youtube.com/embed/${id}`;
       }
-      if (parsed.pathname.startsWith('/embed/')) {
-        const embedId = parsed.pathname.split('/').pop();
+      if (/^\/(embed|shorts|live)\//.test(parsed.pathname)) {
+        const embedId = parsed.pathname.split('/').filter(Boolean).pop();
         if (embedId) {
           return `https://www.youtube.com/embed/${embedId}`;
         }
@@ -230,6 +230,7 @@ export default function Home() {
     }
 
     let observer;
+    const controller = new AbortController();
 
     const handleIntersect = (entries) => {
       if (!entries[0].isIntersecting) {
@@ -237,8 +238,15 @@ export default function Home() {
       }
 
       setPodStatus('loading');
-      fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&thumbs=true`)
-        .then((res) => res.json())
+      fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&thumbs=true`, {
+        signal: controller.signal,
+      })
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('NASA APOD request failed');
+          }
+          return res.json();
+        })
         .then((data) => {
           if (data && data.title) {
             setPod(data);
@@ -247,7 +255,11 @@ export default function Home() {
             setPodStatus('error');
           }
         })
-        .catch(() => setPodStatus('error'));
+        .catch((error) => {
+          if (error.name !== 'AbortError') {
+            setPodStatus('error');
+          }
+        });
 
       if (observer) {
         observer.disconnect();
@@ -258,6 +270,7 @@ export default function Home() {
     observer.observe(playgroundRef.current);
 
     return () => {
+      controller.abort();
       if (observer) {
         observer.disconnect();
       }
